@@ -1,6 +1,6 @@
 # Makingitallwork Introduction
 
-The makingitallwork repositories are a hobby project to provide an example platform for educational purposes.  This platform will test, build and deploy the sample applications to infrastructure that is managed via infrastructure  as code.  
+The makingitallwork (MIAW) repositories are a hobby project to provide an example platform for educational purposes.  This platform will test, build and deploy the sample applications to infrastructure that is managed via infrastructure  as code.  
 
 ## 10,000 Foot View
 At a very high level this project has 4 main pieces
@@ -29,15 +29,7 @@ graph TD;
 _Containers are just a CVE delivery system  
 -- Unknown_
 
-A base container image (a.k.a golden image) is used to create a standard image for an organization that will contain tools that are standard (expected to be there) throughout an organization. 
-
-Why would you use a base image?  Ideally it allows you to move change at an organizational level.  There are several scenarios where a base image is advantageous.
-
-- Patching - If a patch is issued for a security vulnerability you can apply the patch to a standard image.  Knowing what apps are patched can be easily deduced without having to explore large number of applications.
-
-- Standard tools - Without a standard image you could have a number tools that do the same job.  It could be difficult to automate common workflows, especially for teams that work across an organization.  
-
-- Simplify roll out of new tools - If you need to roll out a tool that is to be used across your ecosystem you need to add it to `n` applications.  The large `n` is the more PRs and testing is needed.  Being able to introduce a new change in one place will simplify roll out and increase velocity.
+A base container image (a.k.a golden image) is used to create a standard image for an organization that will contain tools that are standard (expected to be there) throughout an organization.  To learn more about this pattern check out the [doubloon](https://github.com/makingitallwork/doubloon) repo which is the MIAW base container repo. 
 
 ### 2. Applications
 
